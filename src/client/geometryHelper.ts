@@ -16,7 +16,7 @@ export class GeometryHelper {
     // true | false and true - dev -> i.e. provide images from your server in api pathPrefix settings
     // do not forget to edit imports
     useLocalAssets = true
-    useRawData = false
+    useRawData = true
 
     // if true, mesh generation is offloaded to worker and useLocalAssets/useRawData is ignored
     // used in prod, behaves like useLocalAssets = true, useRawData = false

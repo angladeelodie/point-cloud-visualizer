@@ -1,6 +1,13 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 
 module.exports = {
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/index.html', // path to your index.html file
+        }),
+    ],
     entry: './src/client/client.ts',
     module: {
         rules: [
@@ -16,7 +23,21 @@ module.exports = {
             {
                 test: /\.json/,
                 type: 'asset/resource'
-            }
+            },
+            // CSS rules
+            {
+                test: /\\.css$/,
+                use: [
+                    "style-loader",
+                    {
+                        loader: "css-loader",
+                        options: {
+                            importLoaders: 1,
+                            modules: true,
+                        },
+                    },
+                ],
+            },
         ],
     },
     resolve: {
