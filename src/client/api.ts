@@ -70,8 +70,12 @@ import * as THREE from 'three'
 // Web friendly data source
 
 //farm
-import housepic from "./assets/house/housepic.jpg"
-import housemapzip from "./assets/house/housemap.png"
+// import housepic from "./assets/house/housepic.jpg"
+// import housemapzip from "./assets/house/housemap.png"
+
+import housepic from "./assets/house/beach.jpg"
+// import housemapzip from "./assets/house/beach_depth.png"
+import housemapzip from "./assets/house/beach_depth_blur.png"
 
 
 //ai

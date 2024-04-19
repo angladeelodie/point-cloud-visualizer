@@ -190,6 +190,7 @@ export class CloudPointRenderer {
             let normalX = new THREE.Plane().setFromCoplanarPoints(new THREE.Vector3(), this.camera.position.clone().setY(0), imgCenterPoint).normal
             let normalY = new THREE.Plane().setFromCoplanarPoints(new THREE.Vector3(), this.camera.position.clone().setX(0), imgCenterPoint).normal
 
+
             this.parallaxUniforms.u_scale.value = 1 + this.currentSceneObject.scale.z
             this.parallaxUniforms.u_camera_angle.value = new THREE.Vector3(-angleX*normalX.y, angleY*normalY.x, 0)
         }

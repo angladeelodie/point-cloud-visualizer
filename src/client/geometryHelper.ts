@@ -8,8 +8,8 @@ export class GeometryHelper {
 
     steps = 10
     imgCenterPoints: {[sceneType: string] : Array<THREE.Vector3>}= {}
-    imgMinZ: number = 100
-    imgMaxZ: number = -100
+    imgMinZ: number = 10
+    imgMaxZ: number = -10
     api = new Api()
     
     // true and false - prod
@@ -29,7 +29,7 @@ export class GeometryHelper {
     // Method used for local setting - main thread
     async generatePoints() : Promise<THREE.Points | THREE.Mesh>{
         let geometry: THREE.BufferGeometry | undefined
-        this.steps = 10
+        this.steps = 1
         
         const target = this.guiWrapper.renderingType?.getValue()
         switch(target) {
@@ -108,7 +108,7 @@ export class GeometryHelper {
     // Method used for prod setting - geometry creation in Webworker
     async generatePointsByWorker() : Promise<{mesh: THREE.Points | THREE.Mesh, centerPositions: {[sceneType: string] : Array<THREE.Vector3>}, minZ: number, maxZ: number}>{
         let geometry: THREE.BufferGeometry | undefined
-        this.steps = 10
+        this.steps = 1
 
         const shaderMaterial = new THREE.ShaderMaterial({
             uniforms: this.parallaxUniforms,

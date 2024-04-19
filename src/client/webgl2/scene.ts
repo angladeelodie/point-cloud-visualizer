@@ -7,20 +7,20 @@ import { DrawObjectsWrapper, DrawParams } from "./drawObject/drawObject"
 
 export class Scene {
 
-    fieldVisualizationDensity = 20.0
+    fieldVisualizationDensity = 10.0
     drawObjectsWrapper!: DrawObjectsWrapper
     drawParams!: DrawParams
 
     interpolationHelper!: InterpolationHelper
     cameraControls: CameraControls
     particlesTextureSize = {
-        x: 100,
-        y: 100
+        x: 10,
+        y: 10
     }
 
     simplexTextureSize = {
-        x: 100,
-        y: 100
+        x: 10,
+        y: 10
     }
 
     webglgui!: WebGLGUI

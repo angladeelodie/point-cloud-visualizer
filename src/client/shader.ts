@@ -27,7 +27,7 @@ export const VERTEX_SHADER = `
         #include <morphtarget_vertex>
         vColor = color;
         vUv = uv;
-        gl_PointSize = 2.0;
+        gl_PointSize = 1.0;
 
         #if defined( MORPHTARGETS_COUNT )
             vColor *= morphTargetBaseInfluence;

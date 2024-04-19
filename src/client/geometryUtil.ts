@@ -28,8 +28,8 @@ export function getFarmBufferGeometry(scenarioDataWrapper: ScenarioDataWrapper, 
     const pointsColors = new Float32Array(numOfPoints*3);
 
     let pointPointer = 0
-    let imgMinZ: number = 100
-    let imgMaxZ: number = -100
+    let imgMinZ: number = 3
+    let imgMaxZ: number = -3
     
     let centerDepth = scenarioDataWrapper.getCenterValueAt(1)
 
